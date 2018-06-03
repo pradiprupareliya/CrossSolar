@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Threading.Tasks;
 using CrossSolar.Controllers;
 using CrossSolar.Domain;
@@ -18,6 +19,15 @@ namespace CrossSolar.Tests.Controller
         public PanelControllerTests()
         {
             _panelController = new PanelController(_panelRepositoryMock.Object);
+        }
+
+        [Fact]
+        public void Test1()
+        {
+            //Testing purpose
+            var controller = new ValuesController();
+            var result = controller.GetValues();
+            Assert.Equal(2, result.Count());
         }
 
         [Fact]

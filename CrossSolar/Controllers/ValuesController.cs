@@ -13,10 +13,9 @@ namespace CrossSolar.Controllers
     {
         // GET api/values
         [HttpGet]
-        public async Task<IActionResult> GetValues()
+        public IEnumerable<String> GetValues()
         {
-            var values = new string[] { "value1", "value2" };
-            return Ok(values);
+            return new string[] { "value1", "value2" };
         }
     }
 }
